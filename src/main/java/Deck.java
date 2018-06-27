@@ -1,5 +1,5 @@
-import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Deck {
 
@@ -23,4 +23,12 @@ public class Deck {
     public Card removeCard() {
         return this.deck.remove(0);
     }
+
+    public void shuffle() {
+//        System.out.println(deck);
+        Collections.shuffle(this.deck);
+//        System.out.println(deck);
+    }
+
+
 }

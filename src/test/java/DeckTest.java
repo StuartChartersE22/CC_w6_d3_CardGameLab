@@ -24,4 +24,6 @@ public class DeckTest {
         assertEquals(1, removedCard.getRankValue());
         assertEquals(1, removedCard.getSuitRank());
     }
+
+
 }
