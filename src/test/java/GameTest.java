@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class GameTest {
@@ -8,12 +10,14 @@ public class GameTest {
     private Game game;
     private Player player1;
     private Player player2;
+    private ArrayList<Player> players;
 
     @Before
     public void before() {
         this.player1 = new Player();
         this.player2 = new Player();
-        this.game = new Game();
+        this.players = new ArrayList<>();
+        this.game = new Game(players);
     }
 
     @Test
@@ -28,7 +32,13 @@ public class GameTest {
         assertEquals(50, game.countCardsRemainingInDeck());
         assertEquals(1, player1.countCards());
         assertEquals(1, player2.countCards());
+    }
 
+    @Test
+    public void canDetermineWinner(){
+        game.dealToPlayer(player1);
+        game.dealToPlayer(player2);
+        assertEquals(player2, game.determineWinner());
     }
 
 }

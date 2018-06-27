@@ -83,11 +83,10 @@
           <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+                <state relative-caret-position="332">
+                  <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
                   <folding>
-                    <element signature="e#118#119#0" expanded="true" />
-                    <element signature="e#156#157#0" expanded="true" />
+                    <element signature="imports" expanded="true" />
                     <element signature="e#300#301#0" expanded="true" />
                     <element signature="e#332#333#0" expanded="true" />
                   </folding>
@@ -136,8 +135,8 @@
           <file leaf-file-name="GameTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/GameTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="328">
-                  <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+                <state relative-caret-position="149">
+                  <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#373#374#0" expanded="true" />
@@ -567,7 +566,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.GameTest.canDealCardToPlayer">
+  <component name="RunManager" selected="JUnit.GameTest.canDetermineWinner">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -605,6 +604,23 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="GameTest.canDetermineWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CardGameLab_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GameTest" />
+      <option name="METHOD_NAME" value="canDetermineWinner" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration name="GameTest.gameHasDeck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CardGameLab_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -629,23 +645,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlayerTest" />
       <option name="METHOD_NAME" value="canGetPlayersHand" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="PlayerTest.playerReceivesCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CardGameLab_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PlayerTest" />
-      <option name="METHOD_NAME" value="playerReceivesCard" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -695,19 +694,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.PlayerTest.playerReceivesCard" />
       <item itemvalue="JUnit.PlayerTest.canGetPlayersHand" />
       <item itemvalue="JUnit.GameTest.gameHasDeck" />
       <item itemvalue="JUnit.GameTest" />
       <item itemvalue="JUnit.GameTest.canDealCardToPlayer" />
+      <item itemvalue="JUnit.GameTest.canDetermineWinner" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameTest.canDetermineWinner" />
         <item itemvalue="JUnit.GameTest.canDealCardToPlayer" />
         <item itemvalue="JUnit.GameTest" />
         <item itemvalue="JUnit.GameTest.gameHasDeck" />
         <item itemvalue="JUnit.PlayerTest.canGetPlayersHand" />
-        <item itemvalue="JUnit.PlayerTest.playerReceivesCard" />
       </list>
     </recent_temporary>
   </component>
@@ -725,12 +724,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DeckTest - 2018.06.27 at 11h 22m 55s.xml">
-      <configuration name="DeckTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeckTest - 2018.06.27 at 11h 25m 42s.xml">
-      <configuration name="DeckTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DeckTest_canRemoveCard - 2018.06.27 at 11h 53m 57s.xml">
       <configuration name="DeckTest.canRemoveCard" configurationId="JUnit" />
     </history-entry>
@@ -754,6 +747,12 @@
     </history-entry>
     <history-entry file="GameTest_gameHasDeck - 2018.06.27 at 14h 21m 34s.xml">
       <configuration name="GameTest.gameHasDeck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GameTest - 2018.06.27 at 14h 29m 58s.xml">
+      <configuration name="GameTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GameTest_canDealCardToPlayer - 2018.06.27 at 14h 30m 58s.xml">
+      <configuration name="GameTest.canDealCardToPlayer" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -894,11 +893,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        <state relative-caret-position="332">
+          <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
           <folding>
-            <element signature="e#118#119#0" expanded="true" />
-            <element signature="e#156#157#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="e#300#301#0" expanded="true" />
             <element signature="e#332#333#0" expanded="true" />
           </folding>
@@ -907,8 +905,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GameTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        <state relative-caret-position="149">
+          <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
