@@ -13,7 +13,7 @@ public class GameTest {
     public void before() {
         this.player1 = new Player();
         this.player2 = new Player();
-        this.game = new Game(player1, player2);
+        this.game = new Game();
     }
 
     @Test
@@ -21,5 +21,14 @@ public class GameTest {
         assertEquals(52, game.countCardsRemainingInDeck());
     }
 
+    @Test
+    public void canDealCardToPlayer(){
+        game.dealToPlayer(player1);
+        game.dealToPlayer(player2);
+        assertEquals(50, game.countCardsRemainingInDeck());
+        assertEquals(1, player1.countCards());
+        assertEquals(1, player2.countCards());
+
+    }
 
 }
