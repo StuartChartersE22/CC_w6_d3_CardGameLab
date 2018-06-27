@@ -18,5 +18,12 @@ public class CardTest {
     }
 
     @Test
+    public void canGetRank(){
+        assertEquals(RankType.FOUR,card.getRank());
+    }
 
+    @Test
+    public void canGetCardValue(){
+        assertEquals(4,card.getValue());
+    }
 }
