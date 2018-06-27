@@ -16,7 +16,11 @@ public class Card {
         return this.rank;
     }
 
-    public int getValue() {
+    public int getRankValue() {
         return this.rank.getValue();
+    }
+
+    public int getSuitRank() {
+        return this.suit.getRank();
     }
 }

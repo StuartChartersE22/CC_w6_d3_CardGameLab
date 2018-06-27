@@ -23,7 +23,12 @@ public class CardTest {
     }
 
     @Test
-    public void canGetCardValue(){
-        assertEquals(4,card.getValue());
+    public void canGetCardRankValue(){
+        assertEquals(4,card.getRankValue());
+    }
+
+    @Test
+    public void canGetCardSuitRank(){
+        assertEquals(2,card.getSuitRank());
     }
 }
