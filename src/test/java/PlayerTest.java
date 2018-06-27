@@ -25,12 +25,4 @@ public class PlayerTest {
         assertEquals(1, player.countCards());
     }
 
-    @Test
-    public void canGetPlayersHand(){
-        player.receivesCard(card);
-        ArrayList<Card> expectedHand = new ArrayList<>();
-        expectedHand.add(card);
-        assertEquals(expectedHand, player.getHand());
-    }
-
 }

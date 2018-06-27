@@ -2,21 +2,21 @@ import java.util.ArrayList;
 
 public class Player {
 
-    private ArrayList<Card> hand;
+    private Hand hand;
 
     public Player(){
-        this.hand = new ArrayList<>();
+        this.hand = new Hand();
     }
 
     public int countCards() {
-        return this.hand.size();
+        return hand.countCards();
     }
 
     public void receivesCard(Card card) {
-        this.hand.add(card);
+        this.hand.addCard(card);
     }
 
-    public ArrayList<Card> getHand(){
+    public Hand getHand(){
         return this.hand;
     }
 

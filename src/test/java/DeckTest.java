@@ -25,5 +25,12 @@ public class DeckTest {
         assertEquals(1, removedCard.getSuitRank());
     }
 
+    @Test
+    public void canShuffleDeck(){
+        deck.shuffle();
+        Card removedCard = deck.removeCard();
+        assertEquals(6, removedCard.getRankValue());
+        assertEquals(4, removedCard.getSuitRank());
+    }
 
 }

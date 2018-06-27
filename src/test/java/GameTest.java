@@ -49,4 +49,18 @@ public class GameTest {
         assertEquals(player2, game.determineWinner());
     }
 
+    @Test
+    public void canStartGame(){
+        game.startNewGame();
+        assertEquals(1, player1.countCards());
+        assertEquals(1, player2.countCards());
+    }
+
+    @Test
+    public void canPlayAGame(){
+        Player winner = game.playAGame();
+        assertEquals(1, game.getWinsForPlayer(player1));
+        assertEquals(0, game.getWinsForPlayer(player2));
+        assertEquals(player1, winner);
+    }
 }

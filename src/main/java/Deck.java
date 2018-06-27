@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 public class Deck {
 
@@ -26,7 +27,7 @@ public class Deck {
 
     public void shuffle() {
 //        System.out.println(deck);
-        Collections.shuffle(this.deck);
+        Collections.shuffle(this.deck, new Random(1));
 //        System.out.println(deck);
     }
 
