@@ -29,12 +29,12 @@ public class Game {
     }
 
     public Player determineWinner() {
-        Player winner;
+        Player winner = null;
         int winningTotal = 0;
         for(Player player : players){
             ArrayList<Card> hand = player.getHand();
             int handTotal = determineValueOfHand(hand);
-            if(winningTotal< handTotal){
+            if(winningTotal < handTotal){
                 winner = player;
                 winningTotal = handTotal;
             }

@@ -17,6 +17,8 @@ public class GameTest {
         this.player1 = new Player();
         this.player2 = new Player();
         this.players = new ArrayList<>();
+        this.players.add(player1);
+        this.players.add(player2);
         this.game = new Game(players);
     }
 
@@ -32,6 +34,12 @@ public class GameTest {
         assertEquals(50, game.countCardsRemainingInDeck());
         assertEquals(1, player1.countCards());
         assertEquals(1, player2.countCards());
+    }
+
+    @Test
+    public void canDetermineValueOfHand(){
+        game.dealToPlayer(player1);
+        assertEquals(1,game.determineValueOfHand(player1.getHand()));
     }
 
     @Test
