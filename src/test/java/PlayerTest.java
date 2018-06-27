@@ -17,6 +17,10 @@ public class PlayerTest {
         assertEquals(0, player.countCards());
     }
 
-
+    @Test
+    public void playerReceivesCard(){
+        player.receivesCard(card);
+        assertEquals(1, player.countCards());
+    }
 
 }
