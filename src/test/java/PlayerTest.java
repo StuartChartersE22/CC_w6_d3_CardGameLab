@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class PlayerTest {
@@ -21,6 +23,14 @@ public class PlayerTest {
     public void playerReceivesCard(){
         player.receivesCard(card);
         assertEquals(1, player.countCards());
+    }
+
+    @Test
+    public void canGetPlayersHand(){
+        player.receivesCard(card);
+        ArrayList<Card> expectedHand = new ArrayList<>();
+        expectedHand.add(card);
+        assertEquals(expectedHand, player.getHand());
     }
 
 }

@@ -15,4 +15,9 @@ public class Player {
     public void receivesCard(Card card) {
         this.hand.add(card);
     }
+
+    public ArrayList<Card> getHand(){
+        return this.hand;
+    }
+
 }
