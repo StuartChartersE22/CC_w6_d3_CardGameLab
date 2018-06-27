@@ -18,4 +18,5 @@ public class Hand {
     public int countCards() {
         return this.cards.size();
     }
+
 }

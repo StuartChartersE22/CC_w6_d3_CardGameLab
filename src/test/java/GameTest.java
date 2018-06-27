@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import static org.junit.Assert.assertEquals;
 
@@ -61,6 +62,16 @@ public class GameTest {
         Player winner = game.playAGame();
         assertEquals(1, game.getWinsForPlayer(player1));
         assertEquals(0, game.getWinsForPlayer(player2));
+        assertEquals(player1, winner);
+    }
+
+    @Test
+    public void canResolveSameRank(){
+        Card card1 = new Card(SuitType.HEARTS, RankType.EIGHT);
+        Card card2 = new Card(SuitType.CLUBS, RankType.EIGHT);
+        player1.receivesCard(card1);
+        player2.receivesCard(card2);
+        Player winner = game.determineWinner();
         assertEquals(player1, winner);
     }
 }

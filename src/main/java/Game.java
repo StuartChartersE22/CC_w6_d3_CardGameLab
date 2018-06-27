@@ -33,6 +33,29 @@ public class Game {
         return total;
     }
 
+    public Card findHighestCard(Card card1, Card card2){
+        if(card1.getRankValue() < card2.getRankValue()){
+            return card2;
+        }else if(card1.getRankValue() > card2.getRankValue()){
+            return card1;
+        }else{
+            if(card1.getSuitRank() < card2.getSuitRank()){
+                return card2;
+            }else{
+                return card1;
+            }
+        }
+    }
+
+    public Card highestCardinHand(Hand hand){
+        ArrayList<Card> cards = hand.showCards();
+        Card highestCard = cards.get(0);
+        for(Card card : cards){
+            highestCard = findHighestCard(highestCard, card);
+        }
+        return highestCard;
+    }
+
     public void startNewGame(){
         this.deck.shuffle();
         for(Player player : players){
@@ -52,7 +75,14 @@ public class Game {
                 winner = player;
                 winningTotal = handTotal;
             }else if(winningTotal == handTotal){
-
+                Hand winnersHand = winner.getHand();
+                Hand playersHand = player.getHand();
+                Card winnersHighestCard = highestCardinHand(winnersHand);
+                Card playersHighestCard = highestCardinHand(playersHand);
+                Card winningCard = findHighestCard(winnersHighestCard, playersHighestCard);
+                if(winningCard != winnersHighestCard){
+                    winner = player;
+                }
             }
         }
         addWin(winner);
