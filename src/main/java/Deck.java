@@ -19,4 +19,8 @@ public class Deck {
     public int countCards() {
         return this.deck.size();
     }
+
+    public Card removeCard() {
+        return this.deck.remove(0);
+    }
 }

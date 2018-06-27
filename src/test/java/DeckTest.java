@@ -16,4 +16,12 @@ public class DeckTest {
     public void deckStartsWith52Cards(){
         assertEquals(52, deck.countCards());
     }
+
+    @Test
+    public void canRemoveCard(){
+        Card removedCard = deck.removeCard();
+        assertEquals(51, deck.countCards());
+        assertEquals(1, removedCard.getRankValue());
+        assertEquals(1, removedCard.getSuitRank());
+    }
 }
